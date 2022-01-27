@@ -1,20 +1,20 @@
 header {
   display: flex;
   justify-content: space-around;
-  height: 50px;
+  height: 70px;
   margin: 0 auto;
-  padding-top: 10px;
+  padding-top: 14px;
   text-align: center;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 header svg {
   display: block;
-  width: 150px; height: 40px;
+  width: 150px; height: 45px;
   object-fit: cover;
 }
 
-header .tab {
+header .nav-tab {
   min-width: 60px;
   width: 60px;
 }

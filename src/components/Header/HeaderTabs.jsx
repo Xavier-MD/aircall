@@ -12,13 +12,14 @@ const HeaderTabs = () => {
   return (
     
       <Tabs
+        className='nav-tabs'
         value={value}
         onChange={handleChange}
         aria-label='icon tabs'
         variant='standard'
       >
         <Tab
-          className='tab'
+          className='nav-tab'
           aria-label='Inbox' 
           icon={
             <Badge badgeContent={4} color='primary'>
@@ -27,7 +28,7 @@ const HeaderTabs = () => {
           }
         />
         <Tab
-          className='tab'
+          className='nav-tab'
           aria-label='All Calls'
           icon={
             <Badge badgeContent={7} color='primary'>
@@ -36,7 +37,7 @@ const HeaderTabs = () => {
           }
         />
         <Tab
-          className='tab'
+          className='nav-tab'
           aria-label='More Commands'
           icon={
             <MoreVertRounded />
