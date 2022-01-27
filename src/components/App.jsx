@@ -8,7 +8,7 @@ import { ThemeProvider, CssBaseline } from '@mui/material';
 import useAppData from '../hooks/useAppData.js';
 
 const App = () => {
-  const { state, setCallId } = useAppData();
+  const { state } = useAppData();
 
   return (
     <div className='container'>
@@ -17,9 +17,6 @@ const App = () => {
         <Header />
         <ActivityFeed
           calls={state.calls}
-          callId={state.callId}
-          setCallId={setCallId}
-          call={state.call}
         />
       </ThemeProvider>
     </div>
