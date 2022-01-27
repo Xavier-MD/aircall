@@ -7,11 +7,11 @@ import { FeedRounded } from '@mui/icons-material';
 const ActivityFeed = ({ calls, setCallId, call}) => {
  
   return (
-    <div>
-      <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    <div className='activity-feed'>
+      <List className='call-list'>
         {calls.map((call, i) => (
           <Fragment key={i}>
-            <Divider>
+            <Divider className='date-div'>
               {dateFormatter(call.created_at, 'date')}
             </Divider>
             <Card>
