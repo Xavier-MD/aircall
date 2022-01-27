@@ -3,31 +3,24 @@ import axios from 'axios';
 
 const useAppData = () => {
   const [state, setState] = useState({
-    calls: [],
-    callId: 7834,
-    call: {}
+    calls: []
   });
 
-  const setCallId = (callId) => {
-    setState((prev) => ({ prev, callId }));
-  };
-
   useEffect(() => {
-    Promise.all([
-      axios.get('https://aircall-job.herokuapp.com/activities'),
-      axios.get(`https://aircall-job.herokuapp.com/activities/${state.callId}`)
-    ]).then((all) => {
-      setState((prev) => ({
-        prev,
-        calls: all[0].data,
-        call: all[1].data,
-      }));
-    });
+    axios.get('https://aircall-job.herokuapp.com/activities')
+      .then((res) => {
+        setState((prev) => ({
+          prev,
+          calls: res.data
+        }));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   return {
-    state,
-    setCallId
+    state
   }
 };
 
