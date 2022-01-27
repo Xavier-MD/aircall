@@ -1,4 +1,5 @@
 header {
+  display: flex;
   height: 40px;
   margin: 0 auto;
   padding: 20px 0;
@@ -7,6 +8,11 @@ header {
 }
 
 header svg {
+  display: block;
+  width: 50%; height: 100%;
+}
+
+header .header-tabs {
   display: block;
   width: 100%; height: 100%;
 }
