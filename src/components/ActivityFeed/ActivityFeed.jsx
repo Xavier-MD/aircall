@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 
 import { dateFormatter, callIcon, voicemailCheck } from '../../helpers/activityFeedHelpers.js'
 import { Stack, Divider, List, ListItem, Card, Grid, ListItemIcon, ListItemText, Typography } from '@mui/material';
+import { ArchiveRounded } from '@mui/icons-material';
 import ActivityDetail from '../ActivityDetail/ActivityDetail.jsx';
 import useModalView from '../../hooks/useModalView.js';
 
@@ -36,9 +37,7 @@ const ActivityFeed = ({ calls }) => {
                   <Divider orientation='vertical' flexItem>
                   </Divider>
                   <Stack>
-                    <Grid item xs>
-                      {dateFormatter(call.created_at, 'time')}
-                    </Grid>
+                    {dateFormatter(call.created_at, 'time')}
                     <ActivityDetail
                       call={call}
                       open={open}
@@ -46,6 +45,7 @@ const ActivityFeed = ({ calls }) => {
                       handleClose={handleClose}
                       descriptionElementRef={descriptionElementRef}
                     />
+                    <ArchiveRounded />
                   </Stack>
                 </Stack>
               </ListItem>
