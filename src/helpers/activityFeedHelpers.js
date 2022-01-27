@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import { VoicemailRounded, PhoneCallbackRounded, PhoneForwardedRounded, PhoneMissedRounded, FeedRounded } from '@mui/icons-material';
+import { VoicemailRounded, PhoneCallbackRounded, PhoneForwardedRounded, PhoneMissedRounded } from '@mui/icons-material';
 
 export function dateFormatter(date, format) {
   const formattedDate = new Date(date);
@@ -42,3 +42,13 @@ export function voicemailCheck(callType, toName) {
   }
 }
 
+export function unarchivedCalls(callsArray) {
+  let unarchivedCalls = [];
+
+  for (let call of callsArray) {
+    if (!call.is_archived) {
+      unarchivedCalls.push(call);
+    }
+  }
+  return unarchivedCalls;
+}

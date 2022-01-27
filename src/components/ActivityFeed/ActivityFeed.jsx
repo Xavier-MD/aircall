@@ -1,19 +1,19 @@
 import React, { Fragment } from 'react';
 
-import { dateFormatter, callIcon, voicemailCheck } from '../../helpers/activityFeedHelpers.js'
+import { dateFormatter, callIcon, voicemailCheck, unarchivedCalls } from '../../helpers/activityFeedHelpers.js'
 import { Stack, Divider, List, ListItem, Card, Box, ListItemIcon, ListItemText, Typography } from '@mui/material';
-import { ArchiveRounded } from '@mui/icons-material';
 import ActivityDetail from '../ActivityDetail/ActivityDetail.jsx';
 import useModalView from '../../hooks/useModalView.js';
+import ArchiveCall from './ArchiveCall.jsx';
 
 const ActivityFeed = ({ calls }) => {
 
-  const { open, setOpen, handleClickOpen, handleClose, descriptionElementRef } = useModalView();
+  const { open, handleClickOpen, handleClose, descriptionElementRef } = useModalView();
 
   return (
     <div className='activity-feed'>
       <List className='call-list'>
-        {calls.map((call, i) => (
+        {unarchivedCalls(calls).map((call, i) => (
           <Fragment key={i}>
             <Divider className='date-div'>
               {dateFormatter(call.created_at, 'date')}
@@ -48,7 +48,11 @@ const ActivityFeed = ({ calls }) => {
                       handleClose={handleClose}
                       descriptionElementRef={descriptionElementRef}
                     />
-                    <ArchiveRounded className='archive-button' color='accent'/>
+                    <ArchiveCall
+                      className='archive-button'
+                      color='accent'
+                      callId={call.id}
+                    />
                   </Stack>
                 </Stack>
               </ListItem>
