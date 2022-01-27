@@ -1,7 +1,48 @@
 .activity-feed {
-  margin: 10px;
+  height: 593px;
+  overflow-y: scroll;
+  border-top: solid rgb(207, 214, 207);
+  background-color: rgb(238, 253, 238);
 }
 
 .activity-feed .date-div {
   margin: 10px;
+  font-family: 'Jost';
+}
+
+.activity-feed .call-card {
+  margin: 20px;
+  height: 95px;
+}
+
+.activity-feed .call-stack {
+  display: flex;
+  flex-direction: row;
+}
+
+.activity-feed .call-box {
+  display: block;
+  min-width: 230px;
+}
+
+.activity-feed .big-text-left {
+  font-family: 'Raleway';
+  font-size: 1em;
+}
+
+.activity-feed .small-text-left {
+  font-family: 'Raleway';
+  font-size: 0.6em;
+  color: rgb(116, 116, 116);
+}
+
+.activity-feed .tools-right {
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+}
+
+.activity-feed .time-right {
+  font-family: 'Jost';
+  font-size: 0.8em;
 }

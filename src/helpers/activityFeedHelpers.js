@@ -18,15 +18,15 @@ export function callIcon(callDirection, callType) {
     return <VoicemailRounded />
   } else if (callType === 'answered' && callDirection === 'inbound') {
     return (
-      <PhoneCallbackRounded />
+      <PhoneCallbackRounded color='secondary' />
     );
   } else if (callType === 'answered' && callDirection === 'outbound') {
     return (
-      <PhoneForwardedRounded />
+      <PhoneForwardedRounded color='secondary' />
     );
   } else if (callType === 'missed') {
     return (
-      <PhoneMissedRounded />
+      <PhoneMissedRounded color='error' />
     );
   }
 }
