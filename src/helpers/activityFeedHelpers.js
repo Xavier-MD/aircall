@@ -10,6 +10,9 @@ export function dateFormatter(date, format) {
   } else if (format === 'time') {
     const newTime = moment(formattedDate).format('LT')
     return newTime;
+  } else if (format === 'dateTime') {
+    const newStamp = moment(formattedDate).format('MMMM Do YYYY, h:mm a')
+    return newStamp;
   }
 }
 

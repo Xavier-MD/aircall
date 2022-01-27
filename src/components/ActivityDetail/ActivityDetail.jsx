@@ -2,11 +2,12 @@ import React from 'react';
 
 import { Button, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Typography } from '@mui/material';
 import { InfoRounded } from '@mui/icons-material';
+import { dateFormatter } from '../../helpers/activityFeedHelpers.js';
 
 const ActivityDetail = ({ call, open, handleClickOpen, handleClose, descriptionElementRef }) => {
   return (
-    <div>
-      <Button onClick={handleClickOpen()}>
+    <div className='activity-detail'>
+      <Button color='accent' onClick={handleClickOpen()}>
         <InfoRounded />
       </Button>
       <Dialog
@@ -16,38 +17,38 @@ const ActivityDetail = ({ call, open, handleClickOpen, handleClose, descriptionE
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
       >
-        <DialogTitle id="scroll-dialog-title">Call Details</DialogTitle>
+        <DialogTitle id="scroll-dialog-title" fontFamily='Raleway'>Call Details</DialogTitle>
         <DialogContent>
           <DialogContentText
             id="scroll-dialog-description"
             ref={descriptionElementRef}
             tabIndex={-1}
           >
-            <Typography>
+            <Typography fontFamily={'Work Sans'}>
               ID: {call.id}
             </Typography>
-            <Typography>
-              Timestamp: {call.created_at}
+            <Typography fontFamily={'Work Sans'}>
+              Timestamp: {dateFormatter(call.created_at, 'dateTime')}
             </Typography>
-            <Typography>
+            <Typography fontFamily={'Work Sans'}>
               Direction: {call.direction}
             </Typography>
-            <Typography>
+            <Typography fontFamily={'Work Sans'}>
               Status: {call.call_type}
             </Typography>
-            <Typography>
+            <Typography fontFamily={'Work Sans'}>
               Duration: {call.duration}
             </Typography>
-            <Typography>
+            <Typography fontFamily={'Work Sans'}>
               To: {call.to}
             </Typography>
-            <Typography>
+            <Typography fontFamily={'Work Sans'}>
               From: {call.from}
             </Typography>
-            <Typography>
+            <Typography fontFamily={'Work Sans'}>
               Via: {call.via}
             </Typography>
-            <Typography>
+            <Typography fontFamily={'Work Sans'}>
               Archive Status: {call.is_archived}
             </Typography>
           </DialogContentText>

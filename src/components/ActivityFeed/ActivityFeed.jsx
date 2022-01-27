@@ -48,7 +48,7 @@ const ActivityFeed = ({ calls }) => {
                       handleClose={handleClose}
                       descriptionElementRef={descriptionElementRef}
                     />
-                    <ArchiveRounded className='archive-button' color='black'/>
+                    <ArchiveRounded className='archive-button' color='accent'/>
                   </Stack>
                 </Stack>
               </ListItem>

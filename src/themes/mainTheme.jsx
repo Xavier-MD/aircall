@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-import { deepPurple } from '@mui/material/colors';
+import { deepPurple, blueGrey } from '@mui/material/colors';
 
 const mainTheme = createTheme({
   palette: {
@@ -9,6 +9,9 @@ const mainTheme = createTheme({
     },
     secondary: {
       main: '#2cc41c'
+    },
+    accent: {
+      main: blueGrey[400]
     }
   },
   typography: {
