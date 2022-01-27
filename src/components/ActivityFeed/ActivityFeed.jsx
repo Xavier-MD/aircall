@@ -5,7 +5,7 @@ import { Stack, Divider, List, ListItem, Card, Grid, ListItemIcon, ListItemText,
 import { FeedRounded } from '@mui/icons-material';
 
 const ActivityFeed = ({ calls, setCallId, call}) => {
- 
+
   return (
     <div>
       <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
