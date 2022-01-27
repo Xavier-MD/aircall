@@ -6,11 +6,9 @@ export function dateFormatter(date, format) {
   const formattedDate = new Date(date);
   if (format === 'date') {
     const newDate = moment(formattedDate).format("MMMM Do YYYY")
-    console.log(newDate)
     return newDate;
   } else if (format === 'time') {
     const newTime = moment(formattedDate).format('LT')
-    console.log(newTime)
     return newTime;
   }
 }
