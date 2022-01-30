@@ -4,7 +4,7 @@ import { dateFormatter, callIcon, voicemailCheck, unarchivedCalls } from '../../
 import { Stack, Divider, List, ListItem, Card, Box, ListItemIcon, ListItemText, Typography } from '@mui/material';
 import ActivityDetail from '../ActivityDetail/ActivityDetail.jsx';
 import useModalView from '../../hooks/useModalView.js';
-import ArchiveCall from './ArchiveCall.jsx';
+import ArchiveItem from './ArchiveItem.jsx';
 
 const ActivityFeed = ({ calls }) => {
 
@@ -48,7 +48,7 @@ const ActivityFeed = ({ calls }) => {
                       handleClose={handleClose}
                       descriptionElementRef={descriptionElementRef}
                     />
-                    <ArchiveCall
+                    <ArchiveItem
                       className='archive-button'
                       color='accent'
                       callId={call.id}

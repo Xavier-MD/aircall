@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Button } from '@mui/material';
 import { ArchiveRounded } from '@mui/icons-material';
 
-const ArchiveCall = ({ callId }) => {
+const ArchiveItem = ({ callId }) => {
   
   const archiveHandler = function(event) {
     event.preventDefault();
@@ -28,4 +28,4 @@ const ArchiveCall = ({ callId }) => {
   );
 };
 
-export default ArchiveCall;
+export default ArchiveItem;
