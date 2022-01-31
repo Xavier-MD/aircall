@@ -1,0 +1,79 @@
+.activity-manager {
+  height: 593px;
+  overflow-y: scroll;
+  border-top: solid rgb(207, 214, 207);
+  background-color: rgb(238, 253, 238);
+}
+
+.activity-manager .call-list-title {
+  display: flex;
+  justify-content: center;
+  font-family: 'Work Sans';
+  font-size: 1.5em;
+}
+
+.activity-manager .call-list-subtitle {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  font-family: 'Jost';
+  font-size: 1.3em;
+  color: rgb(47, 161, 152);
+  text-decoration: underline;
+}
+
+.activity-manager .date-div {
+  margin: 10px;
+  font-family: 'Jost';
+}
+
+.activity-manager .call-card {
+  margin: 20px;
+  height: 95px;
+}
+
+.activity-manager .archived-call-card {
+  margin: 20px;
+  height: 95px;
+  background-color: rgb(199, 199, 199);
+}
+
+.activity-manager .call-stack {
+  display: flex;
+  flex-direction: row;
+}
+
+.activity-manager .call-box {
+  display: block;
+  min-width: 230px;
+}
+
+.activity-manager .big-text-left {
+  font-family: 'Raleway';
+  font-size: 1em;
+}
+
+.activity-manager .small-text-left {
+  font-family: 'Raleway';
+  font-size: 0.6em;
+  color: rgb(116, 116, 116);
+}
+
+.activity-manager .tools-right {
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+}
+
+.activity-manager .time-right {
+  font-family: 'Jost';
+  font-size: 0.8em;
+}
+
+.activity-manager .archive-button {
+  margin-top: -5px;
+}
+
+.activity-manager .unarchive-button {
+  margin-top: -5px;
+}

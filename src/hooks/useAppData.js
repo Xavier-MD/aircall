@@ -3,8 +3,16 @@ import axios from 'axios';
 
 const useAppData = () => {
   const [state, setState] = useState({
-    calls: []
+    calls: [],
+    mode: 'ActivityFeed'
   });
+
+  function transition(mode) {
+    setState((prev) => ({
+      prev,
+      mode: mode
+    }));
+  }
 
   useEffect(() => {
     axios.get('https://aircall-job.herokuapp.com/activities')
@@ -17,10 +25,11 @@ const useAppData = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [state.calls]);
 
   return {
-    state
+    state,
+    transition
   }
 };
 

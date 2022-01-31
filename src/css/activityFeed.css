@@ -5,6 +5,13 @@
   background-color: rgb(238, 253, 238);
 }
 
+.activity-feed .call-list-title {
+  display: flex;
+  justify-content: center;
+  font-family: 'Work Sans';
+  font-size: 1.5em;
+}
+
 .activity-feed .date-div {
   margin: 10px;
   font-family: 'Jost';
@@ -45,4 +52,8 @@
 .activity-feed .time-right {
   font-family: 'Jost';
   font-size: 0.8em;
+}
+
+.activity-feed .archive-button {
+  margin-top: -5px;
 }

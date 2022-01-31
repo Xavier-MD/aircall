@@ -20,7 +20,7 @@ const ArchiveItem = ({ callId }) => {
   }
 
   return (
-    <div className='archive button'>
+    <div className='archive-button'>
       <Button onClick={archiveHandler}>
         <ArchiveRounded />
       </Button>

@@ -12,8 +12,13 @@ const ActivityFeed = ({ calls }) => {
 
   return (
     <div className='activity-feed'>
-      <List className='call-list'>
-        {unarchivedCalls(calls).map((call, i) => (
+      <List>
+        <Card>
+          <Typography className='call-list-title'>
+            Inbox
+          </Typography>
+        </Card>
+        {unarchivedCalls(calls)?.map((call, i) => (
           <Fragment key={i}>
             <Divider className='date-div'>
               {dateFormatter(call.created_at, 'date')}
@@ -49,7 +54,6 @@ const ActivityFeed = ({ calls }) => {
                       descriptionElementRef={descriptionElementRef}
                     />
                     <ArchiveItem
-                      className='archive-button'
                       color='accent'
                       callId={call.id}
                     />

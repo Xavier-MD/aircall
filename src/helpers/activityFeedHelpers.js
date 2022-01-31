@@ -52,3 +52,14 @@ export function unarchivedCalls(callsArray) {
   }
   return unarchivedCalls;
 }
+
+export function archivedCalls(callsArray) {
+  let archivedCalls = [];
+
+  for (let call of callsArray) {
+    if (call.is_archived) {
+      archivedCalls.push(call);
+    }
+  }
+  return archivedCalls;
+}
