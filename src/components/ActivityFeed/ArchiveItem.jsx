@@ -5,10 +5,12 @@ import { Button, Tooltip } from '@mui/material';
 import { ArchiveRounded } from '@mui/icons-material';
 
 const ArchiveItem = ({ callId }) => {
+
+  const url = `https://aircall-job.herokuapp.com/activities/${callId}`;
   
   const archiveHandler = function(event) {
     event.preventDefault();
-    axios.post(`https://aircall-job.herokuapp.com/activities/${callId}`, {
+    axios.post(url, {
       is_archived: true
     })
       .then((res) => {

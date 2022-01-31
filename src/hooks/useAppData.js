@@ -6,8 +6,10 @@ const useAppData = () => {
     calls: []
   });
 
+  const url = 'https://aircall-job.herokuapp.com/activities';
+
   useEffect(() => {
-    axios.get('https://aircall-job.herokuapp.com/activities')
+    axios.get(url)
       .then((res) => {
         setState((prev) => ({
           prev,

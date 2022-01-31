@@ -6,9 +6,11 @@ import { UnarchiveRounded } from '@mui/icons-material';
 
 const UnarchiveItem = ({ callId }) => {
 
+  const url = `https://aircall-job.herokuapp.com/activities/${callId}`;
+
   const unarchiveHandler = function (event) {
     event.preventDefault();
-    axios.post(`https://aircall-job.herokuapp.com/activities/${callId}`, {
+    axios.post(url, {
       is_archived: false
     })
       .then((res) => {
