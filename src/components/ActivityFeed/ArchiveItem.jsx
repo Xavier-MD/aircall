@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import { Button } from '@mui/material';
+import { Button, Tooltip } from '@mui/material';
 import { ArchiveRounded } from '@mui/icons-material';
 
 const ArchiveItem = ({ callId }) => {
@@ -21,9 +21,11 @@ const ArchiveItem = ({ callId }) => {
 
   return (
     <div className='archive-button'>
-      <Button onClick={archiveHandler}>
-        <ArchiveRounded />
-      </Button>
+      <Tooltip title="Archive">
+        <Button onClick={archiveHandler}>
+          <ArchiveRounded />
+        </Button>
+      </Tooltip>
     </div>
   );
 };

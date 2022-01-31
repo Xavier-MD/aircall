@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import { Button } from '@mui/material';
+import { Button, Tooltip } from '@mui/material';
 import { UnarchiveRounded } from '@mui/icons-material';
 
 const UnarchiveItem = ({ callId }) => {
@@ -21,9 +21,11 @@ const UnarchiveItem = ({ callId }) => {
 
   return (
     <div className='unarchive-button'>
-      <Button onClick={unarchiveHandler}>
-        <UnarchiveRounded />
-      </Button>
+      <Tooltip title="Unarchive">
+        <Button onClick={unarchiveHandler}>
+          <UnarchiveRounded />
+        </Button>
+      </Tooltip>
     </div>
   );
 };

@@ -1,15 +1,17 @@
 import React from 'react';
 
-import { Button, Dialog, DialogTitle, DialogContent, DialogActions, Typography } from '@mui/material';
+import { Button, Dialog, DialogTitle, DialogContent, DialogActions, Typography, Tooltip } from '@mui/material';
 import { InfoRounded } from '@mui/icons-material';
 import { dateFormatter } from '../../helpers/activityFeedHelpers.js';
 
 const ActivityDetail = ({ call, open, handleClickOpen, handleClose }) => {
   return (
     <div className='activity-detail'>
-      <Button color='accent' onClick={handleClickOpen()}>
-        <InfoRounded />
-      </Button>
+      <Tooltip title="More Details">
+        <Button color='accent' onClick={handleClickOpen()}>
+          <InfoRounded />
+        </Button>
+      </Tooltip>
       <Dialog
         open={open}
         onClose={handleClose}
