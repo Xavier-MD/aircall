@@ -2,11 +2,14 @@ import React from 'react';
 import HeaderSVG from './HeaderSVG.jsx';
 import HeaderTabs from './HeaderTabs.jsx';
 
-const Header = () => {
+const Header = ({ calls, setMode }) => {
   return (
     <header>
       <HeaderSVG />
-      <HeaderTabs />
+      <HeaderTabs 
+        calls={calls}
+        setMode={setMode}
+      />
     </header>
   );
 };
